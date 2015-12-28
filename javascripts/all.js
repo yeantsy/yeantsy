@@ -14,5 +14,3 @@ $('.sidebar-title').click(function(){
     $('.sidebar-title i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
   }
 });
-
-$('.corner').corner();
