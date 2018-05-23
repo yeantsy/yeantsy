@@ -103,12 +103,15 @@
       key: sheetsUrl,
       callback: function(data) {
         for(var year in data) {
+          var html = '';
           var year_name = data[year].name;
-          $('#years').append('<h3>'+year_name+'</h3>');
+          html += '<h3>'+year_name+'</h3>';
 
-          for(var i = data[year].elements.length; i > 0; i--) {
-            $('#years').append('<p>'+data[year].elements[i].title+'</p>');
+          for(var i = 0; i < data[year].elements.length; i++) {
+            html += '<p>'+data[year].elements[i].title+'</p>';
           }
+          
+          $('#years').prepend(html);
         }
       }
     });
