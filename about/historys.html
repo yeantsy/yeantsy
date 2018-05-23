@@ -106,7 +106,7 @@
           var year_name = data[year].name;
           $('#years').append('<h3>'+year_name+'</h3>');
 
-          for(var i = 0; i < data[year].elements.length; i++) {
+          for(var i = data[year].elements.length; i > 0; i--) {
             $('#years').append('<p>'+data[year].elements[i].title+'</p>');
           }
         }
